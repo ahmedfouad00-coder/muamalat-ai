@@ -5,7 +5,7 @@
 An end-to-end Retrieval-Augmented Generation (RAG) system that answers Islamic finance questions using verified fatwas. The system combines semantic search with ChromaDB, HuggingFace Embeddings, and Groq LLMs to generate accurate, source-grounded responses through a FastAPI backend.
 
 <p align="center">
-  <img src="img/architecture.png" alt="Muamalat AI Architecture" width="700"/>
+  <img src="img/architecture.png" alt="Muamalat AI Architecture" width="500"/>
 </p>
 
 ## Project Demo
