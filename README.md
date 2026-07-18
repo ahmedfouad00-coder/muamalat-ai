@@ -14,7 +14,7 @@ Muamalat AI is an end-to-end **Retrieval-Augmented Generation (RAG)** system tha
 
 ---
 
-# 🎥 Project Demo
+# Project Demo
 
 <p align="center">
   <a href="https://youtu.be/eDT6bg_Um9c?si=eTSATjzD5W6vsk4q">
