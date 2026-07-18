@@ -1,53 +1,91 @@
 # Muamalat AI | معاملات AI
 
-**An AI-powered assistant for Islamic financial jurisprudence (Fiqh al-Muamalat).**
+> **An AI-powered assistant for Islamic Financial Jurisprudence (Fiqh al-Muamalat).**
 
-An end-to-end Retrieval-Augmented Generation (RAG) system that answers Islamic finance questions using verified fatwas. The system combines semantic search with ChromaDB, HuggingFace Embeddings, and Groq LLMs to generate accurate, source-grounded responses through a FastAPI backend.
+Muamalat AI is an end-to-end **Retrieval-Augmented Generation (RAG)** system that answers questions related to **Islamic financial transactions** using verified fatwas. The system combines semantic search, vector embeddings, and Large Language Models (LLMs) to generate accurate, context-grounded responses through a FastAPI backend.
+
+---
+
+# System Architecture
 
 <p align="center">
-  <img src="img/architecture.png" alt="Muamalat AI Architecture" width="500"/>
+  <img src="img/architecture.png" alt="Muamalat AI Architecture" width="500">
 </p>
 
-## Project Demo
+---
 
-Watch the project demonstration on YouTube:
+# 🎥 Project Demo
 
-**https://youtu.be/eDT6bg_Um9c?si=eTSATjzD5W6vsk4q**
+<p align="center">
+  <a href="https://youtu.be/eDT6bg_Um9c?si=eTSATjzD5W6vsk4q">
+    <img src="img/demo-thumbnail.png" alt="Watch Demo" width="700">
+  </a>
+</p>
+
+<p align="center">
+Click the image above to watch the project demonstration.
+</p>
 
 ---
 
-## Features
+# Features
 
-- End-to-End RAG Pipeline
-- Semantic Search with ChromaDB
+- End-to-End Retrieval-Augmented Generation (RAG)
+- Multi-Agent Architecture
+- Semantic Search using ChromaDB
 - HuggingFace Embeddings (BAAI/bge-m3)
 - Groq LLM Integration
-- Multi-Agent Architecture
 - FastAPI REST API
+- Conversation Memory
 - Prompt Engineering
-- Automated Evaluation Pipeline
 - Source-Grounded Responses
+- Automated Evaluation Pipeline
 
 ---
 
-## Project Structure
+# Multi-Agent Workflow
+
+The system consists of several specialized AI agents working together:
+
+| Agent                   | Responsibility                                                        |
+| ----------------------- | --------------------------------------------------------------------- |
+| **Clarification Agent** | Detects ambiguous questions and asks follow-up questions when needed. |
+| **Rephraser Agent**     | Reformulates user questions into retrieval-friendly queries.          |
+| **Memory Manager**      | Maintains conversation history and pending clarification state.       |
+| **RAG Pipeline**        | Retrieves relevant fatwas and generates grounded responses.           |
+
+---
+
+# Retrieval Pipeline
+
+1. User submits a question.
+2. Clarification Agent checks whether the question is sufficiently clear.
+3. Rephraser Agent rewrites the query for better retrieval.
+4. ChromaDB retrieves the most relevant fatwas.
+5. Retrieved documents are formatted into the prompt.
+6. Groq LLM generates a grounded response.
+7. Conversation memory is updated.
+
+---
+
+# Project Structure
 
 ```text
 app/
 │
 ├── Agents/          # AI agents
-├── api/             # FastAPI endpoints
+├── api/             # FastAPI routes & schemas
 ├── evaluation/      # Evaluation pipeline
 ├── prompts/         # Prompt templates
 ├── rag/             # Retrieval pipeline
-├── static/          # Frontend assets
+├── static/          # CSS, JavaScript, images
 ├── templates/       # HTML templates
-└── main.py          # FastAPI entry point
+└── main.py          # FastAPI application
 ```
 
 ---
 
-## Tech Stack
+# Tech Stack
 
 - Python
 - FastAPI
@@ -59,7 +97,7 @@ app/
 
 ---
 
-## Installation
+# Installation
 
 Clone the repository:
 
@@ -76,53 +114,53 @@ pip install -r requirements.txt
 
 ---
 
-## Environment Variables
+# Environment Variables
 
 Create a `.env` file in the project root:
 
 ```env
-GROQ_API_KEY=your_api_key_here
+GROQ_API_KEY=your_groq_api_key
 ```
 
 ---
 
-## Dataset
+# Dataset
 
-The knowledge base consists of verified Islamic finance fatwas stored in JSON format and indexed into ChromaDB for semantic retrieval.
+The knowledge base consists of **verified Islamic finance fatwas** stored in JSON format and indexed into **ChromaDB** for semantic retrieval.
 
 ---
 
-## Run the Application
+# Running the Application
+
+Start the FastAPI server:
 
 ```bash
 uvicorn app.main:app --reload
 ```
 
-Open the application:
+Open your browser:
 
-- **API:** http://127.0.0.1:8000
+- **Application:** http://127.0.0.1:8000
 - **Swagger UI:** http://127.0.0.1:8000/docs
 
 ---
 
-## Evaluation
+# Evaluation
 
-The project includes an evaluation pipeline to assess the quality of generated answers against the retrieved context.
-
----
-
-## Retrieval Pipeline
-
-1. User submits a question.
-2. The query is converted into embeddings.
-3. ChromaDB retrieves the most relevant fatwas.
-4. Retrieved context is injected into the prompt.
-5. Groq LLM generates a grounded response.
+The project includes an automated evaluation pipeline that measures the quality of generated answers against the retrieved context.
 
 ---
 
-## Contact
+# 👤 Author
 
-If you have any questions or suggestions, feel free to open an issue or connect with me on LinkedIn.
+**Ahmed Fouad**
 
-- **LinkedIn:** https://www.linkedin.com/in/ahmed-fouad-182186376
+AI Engineer | LLM Engineer | Machine Learning Engineer
+
+- LinkedIn: https://www.linkedin.com/in/ahmed-fouad-182186376
+
+---
+
+# Support
+
+If you found this project useful, consider giving it a **Star ⭐** on GitHub.
