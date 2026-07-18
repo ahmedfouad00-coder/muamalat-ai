@@ -151,7 +151,7 @@ The project includes an automated evaluation pipeline that measures the quality 
 
 ---
 
-# 👤 Author
+# Author
 
 **Ahmed Fouad**
 
