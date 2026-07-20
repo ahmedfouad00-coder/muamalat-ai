@@ -158,9 +158,3 @@ The project includes an automated evaluation pipeline that measures the quality 
 AI Engineer | LLM Engineer | Machine Learning Engineer
 
 - LinkedIn: https://www.linkedin.com/in/ahmed-fouad-182186376
-
----
-
-# Support
-
-If you found this project useful, consider giving it a **Star ⭐** on GitHub.
